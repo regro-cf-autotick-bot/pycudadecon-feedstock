@@ -1,5 +1,5 @@
 {% set name = "pycudadecon" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ff2dd2393ca23b2bf3b17fe2bf7011dde1570d84f578fcdd9cf20352b3c6b697
+  sha256: 5c05a485f5538c57fa266fe2397d0886fd8801d9d26b63e743902656e4d73947
 
 build:
   number: 0
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python wrapper for cudaDecon - GPU accelerated 3D deconvolution for microscopy'
+  summary: Python wrapper for cudaDecon - GPU accelerated 3D deconvolution for microscopy
   description: |
     This package provides a python wrapper and convenience functions for cudadecon,
     a CUDA/C++ implementation of an accelerated Richardson Lucy Deconvolution algorithm.
