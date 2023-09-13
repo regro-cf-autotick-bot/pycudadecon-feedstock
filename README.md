@@ -1,11 +1,11 @@
-About pycudadecon
-=================
+About pycudadecon-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycudadecon-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tlambert03/pycudadecon
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycudadecon-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python wrapper for cudaDecon - GPU accelerated 3D deconvolution for microscopy
 
