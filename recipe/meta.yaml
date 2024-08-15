@@ -18,6 +18,8 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8
     - numpy
@@ -28,6 +30,10 @@ requirements:
 test:
   imports:
     - pycudadecon
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/tlambert03/pycudadecon
