@@ -1,5 +1,5 @@
 {% set name = "pycudadecon" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36deb0deda0d601aaf66f75c88ec876608c2c1069d0657f994557e3824185806
+  sha256: 244a2d0fe3d663aca4c9ded6e51eb39dc9610b9f3a0546fafb9eb9c9595da048
 
 build:
   number: 0
@@ -16,19 +16,24 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
+    - hatchling
+    - hatch-vcs
   run:
-    - python >=3.7
+    - python >=3.8
     - numpy
-    - cudadecon >=0.0.11
+    - cudadecon >=0.7.0
     - tifffile >=0.14.0
     - typing_extensions
-    - importlib-metadata >=1.5.0  # not needed for py>37 but keeping for noarch
 
 test:
   imports:
     - pycudadecon
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/tlambert03/pycudadecon
