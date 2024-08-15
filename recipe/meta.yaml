@@ -1,5 +1,5 @@
 {% set name = "pycudadecon" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9d67bab6253cd7c2d416fe9e4aba2e2a818b728bb0ba29f4759d1f0dcfc3cef
+  sha256: 244a2d0fe3d663aca4c9ded6e51eb39dc9610b9f3a0546fafb9eb9c9595da048
 
 build:
   number: 0
