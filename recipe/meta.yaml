@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 244a2d0fe3d663aca4c9ded6e51eb39dc9610b9f3a0546fafb9eb9c9595da048
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - cudadecon >=0.7.0
     - tifffile >=0.14.0
@@ -32,6 +32,7 @@ test:
     - pycudadecon
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
